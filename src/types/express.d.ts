@@ -1,8 +1,8 @@
-import { User } from "@prisma/client"
-import express from "express"
+import { Request } from "express";
+import { User } from "@prisma/client";
 
 declare module 'express' {
-    export interface Request {
-        user: User
-    }
+  interface Request {
+    user?: User; // Define the user property as optional
+  }
 }
